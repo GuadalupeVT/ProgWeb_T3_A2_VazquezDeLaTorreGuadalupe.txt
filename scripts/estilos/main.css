@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, Arial;
+    margin: 0;
+}
+
+header{
+    background: #18396A;
+    color:white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1{
+    font-size: 50px;
+}
+
+footer {
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+
+.botones{
+    
+    font-weight: bold;
+    width: 80%;
+    text-align: left;
+    padding: 10px 0px;
+    margin: 10px auto;
+}
+
+.botones a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 100%;
+}
+
+.botones:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+h3.alineacion{
+    text-align: left;
+}
