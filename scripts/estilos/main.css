@@ -49,3 +49,39 @@ footer {
 h3.alineacion{
     text-align: left;
 }
+
+fieldset { 
+    width:500px; 
+    background-color:Beige;
+    align-content: center;
+    
+}
+form.datos{
+    flex: 50%;
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+
+
+input[type=submit] {
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=button] {
+    width: 40%;
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

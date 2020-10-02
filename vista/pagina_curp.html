@@ -18,13 +18,13 @@
 
         <fieldset>
             <legend> &nbsp; Datos personales</legend>
-        <form method="" action="" onsubmit="return validarFormulario()">
+        <form method="" action="" onsubmit="return validarFormulario()" class="datos">
             <label>Nombre(s)*:</label>
             <label> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Primer apellido*:</label><br>
             <input type="text"  id="caja_nombre" name="caja_nombre" placeholder="Ingresa tu nombre(s)" required/>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <input type="text"  id="caja_primerAp" name="caja_primerAp"placeholder="Ingresa tu Primer Apellido" required/><br>
            
-            <label>Segundo Apellido:</label>
+            <br><label>Segundo Apellido:</label>
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Dia de nacimiento*:</label><br>
             <input type="text"  id="caja_segundoAp" name="caja_segundoAp" placeholder="Ingresa tu segundo Apellido" required/>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
             <select id="dia" name="dia">
@@ -60,11 +60,55 @@
                 <option value="29">29</option>
                 <option value="30">30</option>
                 <option value="31">31</option>
-            </select>
+            </select> <br>
+          
+            <br><label>Mes de nacimiento *:</label>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Año de nacimiento*:</label><br>
+            <select id="mes" name="mes">
+                <option value="0" >Seleccionar el mes...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text"  id="caja_año" name="caja_año"placeholder="Ingresa el año Ej.1999" required/><br>
+           
+           
+            <br><label>Sexo *:</label>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Estado*:</label><br>
+            <select id="sexo" name="sexo">
+                <option value="0">Seleccionar el sexo...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="1">Mujer</option>
+                <option value="2">Hombre</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="estado" name="estado">
+                <option value="0" >Seleccionar el estado...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+           
+            <input type="submit" value="REGISTRAR">
         </form>
         </fieldset>
-    
-
 
 
     </body>
