@@ -1,53 +1,58 @@
-function generarCurp(nombre,primerAp,segundoAp,dia,mes,año,genero, estado){
-var curp;
+function generarCurp(){
+
+var nombre=document.getElementById('caja_nombre').value;
+var primerAp=document.getElementById('caja_primerAp').value;
+var segundoAp=document.getElementById('caja_segundoAp').value;
+var dia = document.getElementById("dia").value;
+var mes = document.getElementById("mes").value;
+var año = document.getElementById('caja_año').value;
+var genero=document.getElementById("genero").value;
+var estado=document.getElementById("estado").value;
+
+var curp="";
 nombre.toUpperCase();
 primerAp.toUpperCase();
 segundoAp.toUpperCase();
 
-cadenaap = new char[primerAp.length()];
-    cadenaap=primerAp.toCharArray();
-    curp=String.valueOf(cadenaap[0]);
-                for(j=1;j<primerAp.length();j++){
-                    if(cadenaap[j]=='A' || cadenaap[j]=='E' || cadenaap[j]=='I' || cadenaap[j]=='O' || cadenaap[j]=='U'){
-                      curp=curp.concat(String.valueOf(cadenaap[j]));
-                      j=primerAp.length();
-                    }
-                }          
-    cadenaam= new char[segundoAp.length()];  
-    if (segundoAp.length()!=0){
-    cadenaam=segundoAp.toCharArray();
-                curp=curp.concat(String.valueOf(cadenaam[0]));
-    }else{
-        curp=curp.concat("X");
-    }          
-    cadenan= new char[nombre.length()];
-    cadenan=nombre.toCharArray();
-                if(cadenan[0]=='J' && cadenan[1]=='O' && cadenan[2]=='S' && cadenan[3]=='E'){
-                    if (nombre.length()>4){
-                        curp=curp.concat(String.valueOf(cadenan[5]));
-                    }
-                    else{
-                        curp=curp.concat(String.valueOf(cadenan[0]));
-                    }
-                }else{
-                    if(cadenan[0]=='M' && cadenan[1]=='A' && cadenan[2]=='R' && cadenan[3]=='I' && cadenan[4]=='A'){
-                    if (nombre.length()>5){
-                        curp=curp.concat(String.valueOf(cadenan[6]));
-                    }
-                    }else{
-                        curp=curp.concat(String.valueOf(cadenan[0]));
-                    }
-                }
 
-    curp=curp.concat(año.substr(-3));
-    curp=curp.concat(mes);
-    curp=curp.concat(dia);
+//Primera letra del primer apellido
+curp=curp+primerAp.charAt(0);
+//Primera vocal del primer apellido
+var regex_consonantes = /[^bcdfghjklmnñpqrstvwxyz]/gi;
+var regex_vocales = /[^aeiou]/gi;
+var vocal_primerAp=primerAp.replace(regex_vocales, "");
+curp=curp+vocal_primerAp.charAt(0);
 
-    curp=curp.concat(estado);
+//Primera letra del segundo apellido
+curp=curp+segundoAp.charAt(0);
+//Primera letra del primer nombre exeptuando los nombres compuestos
+curp=curp+nombre.charAt(0);
+//año
+curp=curp+año.substr(-2);
+//mes
+curp=curp+mes;
+//dia
+curp=curp+dia;
+//genero
+curp=curp+genero;
+//entidad
+curp=curp+estado;
+//siguiente consonante del primer apellido
+var consonante_primerAp=primerAp.replace(regex_consonantes, "");
+curp=curp+consonante_primerAp.charAt(1);
+//siguiente consonante del segundo apellido
+var consonante_segundoAp=segundoAp.replace(regex_consonantes, "");
+curp=curp+consonante_segundoAp.charAt(1);
+//siguiente consonante del primer nombre
+var consonante_nombre=nombre.replace(regex_consonantes, "");
+curp=curp+consonante_nombre.charAt(1);
+
+//homoclave
+curp=curp+(Math.floor(Math.random()*(9+1)));
+curp=curp+(Math.floor(Math.random()*(9+1)));
 
 
-
-return curp;
+return "Su curp segun los datos ingresados es: "+curp.toUpperCase();
 }
 
 
