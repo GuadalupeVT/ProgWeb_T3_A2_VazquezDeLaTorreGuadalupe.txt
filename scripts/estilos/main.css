@@ -49,19 +49,42 @@ footer {
 h3.alineacion{
     text-align: left;
 }
+form.conversor{
+    padding-left: 30%;
+    padding-top: 5%;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+}
+
+form.cadenas{
+    padding-left: 30%;
+    padding-top: 5%;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+}
 
 fieldset { 
     width:500px; 
     background-color:Beige;
     align-content: center;
     
+    
 }
 form.datos{
     flex: 50%;
     background-color: #f1f1f1;
     padding: 15px;
+    align-content: center;
 }
 
+input[type=submit].convertir {
+    width: 20%;
+    align-self: center;
+    vertical-align: middle;
+    justify-content: center;
+}
 
 
 input[type=submit] {
@@ -85,3 +108,13 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  input[type=text].caja_numDecimal{
+    width: 40%;
+  }
+
+  input[type=text].caja_cadena{
+    width: 40%;
+  }
+
+  
