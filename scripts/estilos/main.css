@@ -79,16 +79,10 @@ form.datos{
     align-content: center;
 }
 
-input[type=submit].convertir {
-    width: 20%;
-    align-self: center;
-    vertical-align: middle;
-    justify-content: center;
-}
 
 
 input[type=submit] {
-    width: 40%;
+    width: 50%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
